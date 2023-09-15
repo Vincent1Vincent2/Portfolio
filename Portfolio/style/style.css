@@ -78,6 +78,10 @@
   .me-img {
     min-height: 50vh;
   }
+
+  .about-description {
+    font-size: 25px;
+  }
 }
 
 @media only screen and (max-width: 750px) {
@@ -91,5 +95,20 @@
   .intro-title {
     font-size: 3rem;
     line-height: 1;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .about-main {
+    height: 100vh;
+  }
+  .about-description {
+    font-size: 22px;
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  .about-description {
+    font-size: 15px;
   }
 }
