@@ -39,7 +39,12 @@
     <header>
       <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
-          <a class="navbar-brand text-primary" href="index.html">VA</a>
+          <a
+            class="navbar-brand text-primary"
+            alt="My initials"
+            href="index.html"
+            >VA</a
+          >
           <button
             class="navbar-toggler"
             type="button"
@@ -48,9 +53,10 @@
             aria-controls="navbarSupportedContent"
             aria-expanded="false"
             aria-label="Toggle navigation"
+            alt="dropdown menu button"
           >
             <!-- And for thoose keeping count... 3 burgers :) -->
-            <span class="navbar-toggler-icon"></span>
+            <span alt="dropdown menu button" class="navbar-toggler-icon"></span>
           </button>
           <div
             class="collapse navbar-collapse text-light"
@@ -79,7 +85,8 @@
       <div class="container contact-container py-5">
         <div class="row text-center">
           <div class="col">
-            <h2 class="contact-title">Contact me!</h2>
+            <h2 class="contact-title">You made it!</h2>
+            <p>Now send me a mail</p>
           </div>
         </div>
         <div class="row text-center">
@@ -88,53 +95,65 @@
             <form class="form-container">
               <div class="form-group text-start my-5">
                 <!-- This input is box that allows text to be typed in and with the type email it's looking for a '@' sign -->
+                <label for="email">Your Email</label>
                 <input
                   type="email"
                   class="form-control"
                   id="formEmailInput"
-                  placeholder="Your mail goes here"
+                  placeholder="Mail goes here"
                   required
                 />
               </div>
               <div class="form-group text-start my-5">
                 <!-- This input is box that allows text to be typed in and with the type text it aloows you to type plain text -->
+                <label for="name">Your name</label>
                 <input
                   type="text"
                   class="form-control"
                   id="formNameInput"
-                  placeholder="Your name goes here"
+                  placeholder="Name goes here"
                   required
                 />
               </div>
 
               <div class="form-group text-start my-5">
                 <!-- This textarea is box that allows text to be typed in it. And allows for 'cols' and 'rows' to be defined -->
-
+                <label for="message">Your message</label>
                 <textarea
                   class="form-control"
                   id="formMessageInput"
                   cols="40"
                   rows="3"
-                  placeholder="Your message goes here"
+                  placeholder="Message goes here"
                   required
                 ></textarea>
               </div>
               <!-- This is a button with the type 'submit' and with combined with being inside the 'form' tag that it's directly related to it. All info typed in the input and textarea will be sent when the button is clicked -->
-              <button type="submit" class="btn btn-primary my-3">Send!</button>
+              <button
+                type="submit"
+                alt="submit button for the form"
+                class="btn btn-primary my-3"
+              >
+                Send!
+              </button>
             </form>
           </div>
         </div>
       </div>
     </main>
     <footer class="bg-light text-center bg-light">
-      <div class="col p-3" style="background-color: rgb(255, 255, 255)">
+      <div class="p-3" style="background-color: rgb(255, 255, 255)">
         <a href="https://github.com/Vincent1Vincent2" target="_blank">
-          <img class="mx-auto socials" src="imgs/b-git-logo.png" alt=""
+          <img
+            class="mx-auto socials"
+            src="imgs/b-git-logo.png"
+            alt="Github logo"
         /></a>
         <a
           href="https://www.linkedin.com/in/vincent-ahlin-023ba6111/"
           target="_blank"
-          ><img class="w-10 socials" src="imgs/li-icon.png" alt=""
+        >
+          <img class="socials" src="imgs/li-icon.png" alt="LinkedIn logo"
         /></a>
         <div class="text-center p-3 copyright-text">
           © 2023 Copyright:

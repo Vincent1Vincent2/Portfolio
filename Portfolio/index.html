@@ -37,14 +37,19 @@
     />
     <link rel="manifest" href="/favicon/site.webmanifest" />
     <!-- Wow, this is an amazing title that shows up in the tab bar -->
-    <title>Welcome</title>
+    <title>Welcome to my site</title>
   </head>
   <body>
     <!-- This is my header with the navbar in it and use bootstrap to make it quick and easy -->
     <header>
       <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
-          <a class="navbar-brand text-primary" href="index.html">VA</a>
+          <a
+            class="navbar-brand text-primary"
+            alt="My initials"
+            href="index.html"
+            >VA</a
+          >
           <!-- This button is my hamburgur menu that appers when the screen goes to mobile size -->
           <button
             class="navbar-toggler"
@@ -54,9 +59,10 @@
             aria-controls="navbarSupportedContent"
             aria-expanded="false"
             aria-label="Toggle navigation"
+            alt="dropdown menu button"
           >
             <!-- This is the delicious hamburgur  -->
-            <span class="navbar-toggler-icon"></span>
+            <span alt="dropdown menu button" class="navbar-toggler-icon"></span>
           </button>
 
           <div
@@ -98,14 +104,14 @@
                 A front end student studing in Gothenburg
               </p>
               <!-- Here is a button that links to my project page with the color 'primary' to make it blue -->
-              <a class="btn btn-primary" href="projects.html"
+              <a class="myWorkButton btn btn-primary" href="projects.html"
                 >Check out my work!</a
               >
             </div>
             <!-- This is my second column and i don't need to put a lg-6 or any other
             colum size value since it will automaticly take up the rest of the
             row space -->
-            <div class="col text-center">
+            <div class="col-lg-6">
               <img class="me-img" src="imgs/sticker.png" alt="picture of me" />
             </div>
           </div>
@@ -128,19 +134,19 @@
           <div class="col-lg-4 col-md-12 mb-5">
             <!-- Here i choose 'card' that is a bootstrap value that gives me a white background -->
             <div class="card">
-              <img src="imgs/grid.png" alt="projectPic" />
+              <img src="imgs/grid.png" alt="Picture of a website i created" />
               <h3>Lorem, ipsum.</h3>
             </div>
           </div>
           <div class="col-lg-4 col-md-12 mb-5">
             <div class="card">
-              <img src="imgs/grid.png" alt="projectPic" />
+              <img src="imgs/grid.png" alt="Picture of a website i created" />
               <h3>Lorem, ipsum.</h3>
             </div>
           </div>
           <div class="col-lg-4 col-md-12 mb-5">
             <div class="card">
-              <img src="imgs/grid.png" alt="projectPic" />
+              <img src="imgs/grid.png" alt="Picture of a website i created" />
               <h3>Lorem, ipsum.</h3>
             </div>
           </div>
@@ -154,12 +160,18 @@
           <div class="col-12">
             <div class="p-3" style="background-color: rgb(255, 255, 255)">
               <a href="https://github.com/Vincent1Vincent2" target="_blank">
-                <img class="mx-auto socials" src="imgs/b-git-logo.png" alt=""
+                <img
+                  class="mx-auto socials"
+                  src="imgs/b-git-logo.png"
+                  alt="GitHub logo"
               /></a>
               <a
                 href="https://www.linkedin.com/in/vincent-ahlin-023ba6111/"
                 target="_blank"
-                ><img class="w-10 socials" src="imgs/li-icon.png" alt=""
+                ><img
+                  class="w-10 socials"
+                  src="imgs/li-icon.png"
+                  alt="LinkedIn logo"
               /></a>
             </div>
           </div>
