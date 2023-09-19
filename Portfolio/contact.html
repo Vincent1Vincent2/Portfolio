@@ -15,6 +15,24 @@
       rel="stylesheet"
     />
     <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- These are here to display my VA icon in the tab  -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon/favicon-16x16.png"
+    />
     <title>Contact</title>
   </head>
   <body class="bg-white">
@@ -31,6 +49,7 @@
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
+            <!-- And for thoose keeping count... 3 burgers :) -->
             <span class="navbar-toggler-icon"></span>
           </button>
           <div
@@ -56,40 +75,57 @@
       </nav>
     </header>
 
-    <div class="container rounded contact-container">
-      <div class="row text-center">
-        <div class="col">
-          <div class="contact-title">Contact me!</div>
+    <main>
+      <div class="container contact-container py-5">
+        <div class="row text-center">
+          <div class="col">
+            <h2 class="contact-title">Contact me!</h2>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col">
+            <!-- A form tag that allows me to allow YOU to contact ME!  -->
+            <form class="form-container">
+              <div class="form-group text-start my-5">
+                <!-- This input is box that allows text to be typed in and with the type email it's looking for a '@' sign -->
+                <input
+                  type="email"
+                  class="form-control"
+                  id="formEmailInput"
+                  placeholder="Your mail goes here"
+                  required
+                />
+              </div>
+              <div class="form-group text-start my-5">
+                <!-- This input is box that allows text to be typed in and with the type text it aloows you to type plain text -->
+                <input
+                  type="text"
+                  class="form-control"
+                  id="formNameInput"
+                  placeholder="Your name goes here"
+                  required
+                />
+              </div>
+
+              <div class="form-group text-start my-5">
+                <!-- This textarea is box that allows text to be typed in it. And allows for 'cols' and 'rows' to be defined -->
+
+                <textarea
+                  class="form-control"
+                  id="formMessageInput"
+                  cols="40"
+                  rows="3"
+                  placeholder="Your message goes here"
+                  required
+                ></textarea>
+              </div>
+              <!-- This is a button with the type 'submit' and with combined with being inside the 'form' tag that it's directly related to it. All info typed in the input and textarea will be sent when the button is clicked -->
+              <button type="submit" class="btn btn-primary my-3">Send!</button>
+            </form>
+          </div>
         </div>
       </div>
-      <div class="row text-center">
-        <div class="col">
-          <form class="form-container">
-            <div class="form-group text-start">
-              <label for="">Email</label>
-              <input type="email" class="form-control" id="formControlInput" />
-            </div>
-            <div class="form-group text-start">
-              <label for="formControlInput">Name</label>
-              <input type="name" class="form-control" id="formControlInput" />
-            </div>
-
-            <div class="form-group text-start">
-              <label for="formControlInput">Messeage</label>
-              <textarea
-                class="form-control"
-                id="formControlInput"
-                cols="40"
-                rows="3"
-              ></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary my-3">Send!</button>
-          </form>
-        </div>
-      </div>
-    </div>
-
+    </main>
     <footer class="bg-light text-center bg-light">
       <div class="col p-3" style="background-color: rgb(255, 255, 255)">
         <a href="https://github.com/Vincent1Vincent2" target="_blank">
@@ -111,11 +147,6 @@
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
       crossorigin="anonymous"
     ></script>
-    <script>
-      ScrollReveal().reveal(".contact-title", { delay: 450 });
-      ScrollReveal().reveal(".form-container", { delay: 550 });
-      ScrollReveal().reveal(".socials", { delay: 250 });
-      ScrollReveal().reveal(".copyright-text", { delay: 350 });
-    </script>
+    <script src="app.js"></script>
   </body>
 </html>

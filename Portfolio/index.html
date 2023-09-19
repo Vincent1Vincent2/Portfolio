@@ -10,20 +10,42 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- This links my font 'Poppins' from google font  -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <!-- This enables whatever class i want to revele on scroll and requiers less manuel code -->
     <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- These are here to display my VA icon in the tab  -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+    <!-- Wow, this is an amazing title that shows up in the tab bar -->
     <title>Welcome</title>
   </head>
-  <body class="body">
+  <body>
+    <!-- This is my header with the navbar in it and use bootstrap to make it quick and easy -->
     <header>
       <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
           <a class="navbar-brand text-primary" href="index.html">VA</a>
+          <!-- This button is my hamburgur menu that appers when the screen goes to mobile size -->
           <button
             class="navbar-toggler"
             type="button"
@@ -33,13 +55,15 @@
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
+            <!-- This is the delicious hamburgur  -->
             <span class="navbar-toggler-icon"></span>
           </button>
+
           <div
             class="collapse navbar-collapse text-light"
             id="navbarSupportedContent"
           >
-            <ul class="navbar-nav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link nav-text" href="index.html">Home</a>
               </li>
@@ -57,68 +81,94 @@
         </div>
       </nav>
     </header>
+    <!-- I use a main tag so that google knows that this is my most important content, plz gooogle SEO gods, make my site show at the top -->
     <main>
+      <!-- I choose to put my content in a div with the vertical-center class to make centering my content easier -->
       <div class="vertical-center">
+        <!-- Here we use the class conatiner to take advantage of the bootstrap framework -->
         <div class="container">
+          <!-- Here we use the class row as it is a bootstrap value to create a row, and only one is requierd for my layout -->
           <div class="row">
+            <!-- Col is another bootstrap value that i use to create a column, the col-lg-6 states that when the screen is large(lg) this column will take up half of the row (6). The max is 12 and My  is a bootstrap value for margins -->
             <div class="col-lg-6 col-md-12 my-5">
-              <h1 class="text-BLACK intro-title">I am Vincent Ahlin</h1>
-
-              <p class="text-LIGHT" id="description">
+              <!-- text-black makes the text black and then i have another class to be able to use css styling -->
+              <h1 class="text-black intro-title">I am Vincent Ahlin</h1>
+              <!-- Here i use the valu 'Secondary' to get a gray color -->
+              <p class="text-secondary">
                 A front end student studing in Gothenburg
               </p>
-
-              <a href="projects.html"
-                ><button class="btn btn-primary">Check out my work!</button></a
+              <!-- Here is a button that links to my project page with the color 'primary' to make it blue -->
+              <a class="btn btn-primary" href="projects.html"
+                >Check out my work!</a
               >
             </div>
+            <!-- This is my second column and i don't need to put a lg-6 or any other
+            colum size value since it will automaticly take up the rest of the
+            row space -->
             <div class="col text-center">
-              <img class="me-img" src="imgs/sticker.png" />
+              <img class="me-img" src="imgs/sticker.png" alt="picture of me" />
             </div>
           </div>
         </div>
       </div>
     </main>
+    <!-- I put some of my recent works here to give more content to my site and seperate it by setting the background color to gray insted of white -->
     <div class="bg-light">
+      <!-- This is a container for my projects and center the content with
+      'text-center' -->
       <section class="container text-center">
         <div class="row">
-          <div class="col-12 my-5 card-title">
-            <h2>Recent work</h2>
+          <!-- I made a whole row for my title -->
+          <div class="col-12 my-5">
+            <h3>Recent work</h3>
+          </div>
+          <!-- This is the second row for my cards with pictures and titles of my recent work -->
+          <div class="row"></div>
+          <!-- I want them all to line up on big screens and for that i choose col-lg-4 but for smaller screens it will take up 12 with col-md-12 and mb-5 for some margins at the bottom -->
+          <div class="col-lg-4 col-md-12 mb-5">
+            <!-- Here i choose 'card' that is a bootstrap value that gives me a white background -->
+            <div class="card">
+              <img src="imgs/grid.png" alt="projectPic" />
+              <h3>Lorem, ipsum.</h3>
+            </div>
           </div>
           <div class="col-lg-4 col-md-12 mb-5">
             <div class="card">
-              <img src="imgs/grid.png" />
+              <img src="imgs/grid.png" alt="projectPic" />
               <h3>Lorem, ipsum.</h3>
             </div>
           </div>
-          <div class="col-lg-4 col-md-12">
-            <div class="card mb-5">
-              <img src="imgs/grid.png" alt="" />
-              <h3>Lorem, ipsum.</h3>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-12">
-            <div class="card mb-5">
-              <img src="imgs/grid.png" alt="" />
+          <div class="col-lg-4 col-md-12 mb-5">
+            <div class="card">
+              <img src="imgs/grid.png" alt="projectPic" />
               <h3>Lorem, ipsum.</h3>
             </div>
           </div>
         </div>
       </section>
     </div>
-    <footer class="bg-light text-center bg-light">
-      <div class="col p-3" style="background-color: rgb(255, 255, 255)">
-        <a href="https://github.com/Vincent1Vincent2" target="_blank">
-          <img class="mx-auto socials" src="imgs/b-git-logo.png" alt=""
-        /></a>
-        <a
-          href="https://www.linkedin.com/in/vincent-ahlin-023ba6111/"
-          target="_blank"
-          ><img class="w-10 socials" src="imgs/li-icon.png" alt=""
-        /></a>
-        <div class="text-center p-3 copyright-text">
-          © 2023 Copyright:
-          <a class="text-dark" href="vincentahlin.se">Vincentahlin.se</a>
+    <!-- The footer starts here -->
+    <footer class="text-center">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="p-3" style="background-color: rgb(255, 255, 255)">
+              <a href="https://github.com/Vincent1Vincent2" target="_blank">
+                <img class="mx-auto socials" src="imgs/b-git-logo.png" alt=""
+              /></a>
+              <a
+                href="https://www.linkedin.com/in/vincent-ahlin-023ba6111/"
+                target="_blank"
+                ><img class="w-10 socials" src="imgs/li-icon.png" alt=""
+              /></a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="text-center p-3 copyright-text">
+            © 2023 Copyright:
+            <a class="text-dark" href="vincentahlin.se">Vincentahlin.se</a>
+          </div>
         </div>
       </div>
     </footer>
@@ -127,15 +177,7 @@
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
       crossorigin="anonymous"
     ></script>
-    <script>
-      ScrollReveal().reveal("h1", { delay: 350 });
-      ScrollReveal().reveal("p", { delay: 450 });
-      ScrollReveal().reveal(".btn", { delay: 550 });
-      ScrollReveal().reveal(".me-img", { delay: 650 });
-      ScrollReveal().reveal(".card-title", { delay: 250 });
-      ScrollReveal().reveal(".card", { delay: 350 });
-      ScrollReveal().reveal(".socials", { delay: 250 });
-      ScrollReveal().reveal(".copyright-text", { delay: 350 });
-    </script>
+    <!-- We have this here to link and load an externl javascript document -->
+    <script src="app.js"></script>
   </body>
 </html>

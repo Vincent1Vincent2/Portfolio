@@ -15,9 +15,28 @@
       rel="stylesheet"
     />
     <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- These are here to display my VA icon in the tab  -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon/favicon-16x16.png"
+    />
     <title>Projects</title>
   </head>
   <body>
+    <!-- What... another header? -->
     <header>
       <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
@@ -31,6 +50,7 @@
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
+            <!-- We love to see this, another burgur. Thats a total of 2 so far -->
             <span class="navbar-toggler-icon"></span>
           </button>
           <div
@@ -55,8 +75,11 @@
         </div>
       </nav>
     </header>
+    <!-- We swith up the color with some light gray (bg-light) -->
     <main class="bg-light">
+      <!-- This is a godsend to center my content, (it has a height of min-height: 85vh;) -->
       <div class="vertical-center">
+        <!-- Can you put stuff in here? YES and i put two rows and 3 columns -->
         <div class="container text-center">
           <div class="row">
             <div class="col-lg-4 col-md-12 mt-5">
@@ -70,21 +93,22 @@
             </div>
 
             <div class="col mt-5">
-              <img class="w-60 project-img" src="/imgs/grid.png" />
+              <img class="project-img" src="/imgs/grid.png" alt="projectPic" />
             </div>
           </div>
           <div class="row">
             <div class="col">
-              <button class="btn my-5 btn-primary">
-                <a class="project-button" href="/projects/grid/index.html"
-                  >Take me to site</a
-                >
-              </button>
+              <a
+                class="project-button btn my-5 btn-primary"
+                href="/projects/grid/index.html"
+                >Take me to site</a
+              >
             </div>
           </div>
         </div>
       </div>
     </main>
+    <!-- And a footer to end of the page -->
     <footer class="bg-light text-center bg-light">
       <div class="col p-3" style="background-color: rgb(255, 255, 255)">
         <a href="https://github.com/Vincent1Vincent2" target="_blank">
@@ -106,13 +130,6 @@
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
       crossorigin="anonymous"
     ></script>
-    <script>
-      ScrollReveal().reveal(".project-title", { delay: 250 });
-      ScrollReveal().reveal(".project-description", { delay: 250 });
-      ScrollReveal().reveal(".project-img", { delay: 250 });
-      ScrollReveal().reveal(".btn", { delay: 450 });
-      ScrollReveal().reveal(".socials", { delay: 250 });
-      ScrollReveal().reveal(".copyright-text", { delay: 350 });
-    </script>
+    <script src="app.js"></script>
   </body>
 </html>

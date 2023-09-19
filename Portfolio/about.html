@@ -10,18 +10,40 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style/style.css" />
+    <!-- This links my font 'Poppins' from google font  -->
     <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
-    rel="stylesheet"
-  />
-  <script src="https://unpkg.com/scrollreveal"></script>
-  <title>About</title>
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- This enables whatever class i want to revele on scroll and requiers less manuel code -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- These are here to display my VA icon in the tab  -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon/favicon-16x16.png"
+    />
+    <title>About</title>
   </head>
   <body>
+    <!-- This is my header with the navbar in it and use bootstrap to make it quick and easy -->
     <header>
       <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
           <a class="navbar-brand text-primary" href="index.html">VA</a>
+          <!-- This button is my hamburgur menu that appers when the screen goes to mobile size -->
           <button
             class="navbar-toggler"
             type="button"
@@ -31,6 +53,7 @@
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
+            <!-- MMMMMmmmmm hamburgur -->
             <span class="navbar-toggler-icon"></span>
           </button>
           <div
@@ -56,19 +79,29 @@
       </nav>
     </header>
 
-    <main class="about-main">
- <div class="container">
-  <div class="row justify-content-center">
-    <div class="col-12 text-center">
-      <div class="about-title">Hi!</div>
-      <div style="width: px;" class="about-description">
-        My name is Vincent Ahlin, and I am currently studying to become a front-end developer. I love learning new skills and have always had a constant drive to evolve my craft. Before taking my new life on this new path, I worked in the gym industry.  I started as a cleaner at 13 years old and worked my way up until I was the manager of a gym with about 2000 members, and 35 employees that includes reception, personal trainers and grouptraning instructors.
+    <main class="about-main my-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <div class="about-title">Hi!</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 text-center">
+            <div class="about-description py-3">
+              My name is Vincent Ahlin, and I am currently studying to become a
+              front-end developer. I love learning new skills and have always
+              had a constant drive to evolve my craft. Before taking my new life
+              on this new path, I worked in the gym industry. I started as a
+              cleaner at 13 years old and worked my way up until I was the
+              manager of a gym with about 2000 members, and 35 employees that
+              includes reception, personal trainers and grouptraning
+              instructors.
+            </div>
+          </div>
+        </div>
       </div>
     </main>
-  </div>
-  </div>
-  </div>
-  </div>
     <footer class="bg-light text-center bg-light">
       <div class="col p-3" style="background-color: rgb(255, 255, 255)">
         <a href="https://github.com/Vincent1Vincent2" target="_blank">
@@ -90,11 +123,6 @@
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
       crossorigin="anonymous"
     ></script>
-    <script>
-    ScrollReveal().reveal(".about-title", { delay: 350 });
-    ScrollReveal().reveal(".about-description", { delay: 450 });
-    ScrollReveal().reveal(".socials", { delay: 250 });
-      ScrollReveal().reveal(".copyright-text", { delay: 350 });
-   </script>
+    <script src="app.js"></script>
   </body>
 </html>
