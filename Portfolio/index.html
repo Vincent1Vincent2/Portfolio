@@ -87,9 +87,18 @@
         </div>
       </nav>
     </header>
+    <div class="header">
+      <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+      </div>
+    </div>
+    <!-- This is a coustom cursor consistring of one smaller inner circle and one lager outer -->
+    <div class="inner-cursor"></div>
+    <div class="outer-cursor"></div>
     <!-- I use a main tag so that google knows that this is my most important content, plz gooogle SEO gods, make my site show at the top -->
     <main>
       <!-- I choose to put my content in a div with the vertical-center class to make centering my content easier -->
+
       <div class="vertical-center">
         <!-- Here we use the class conatiner to take advantage of the bootstrap framework -->
         <div class="container">
@@ -103,16 +112,65 @@
               <p class="text-secondary">
                 A front end student studing in Gothenburg
               </p>
+
               <!-- Here is a button that links to my project page with the color 'primary' to make it blue -->
-              <a class="myWorkButton btn btn-primary" href="projects.html"
-                >Check out my work!</a
+              <a
+                alt="link to my projects"
+                id="projectLink"
+                href="projects.html"
               >
+                <svg
+                  width="150"
+                  height="145"
+                  viewBox="0 0 86 49"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Frame 1" clip-path="url(#clip0_1_2)">
+                    <g id="triangles (1) 1">
+                      <g id="triangles">
+                        <g id="lightTriangleGroup">
+                          <path
+                            id="lightTriangle"
+                            d="M37.2685 22.0276C39.4099 23.1508 39.4106 26.216 37.2698 27.3403L5.4777 44.0362C3.4803 45.0851 1.0834 43.6369 1.0828 41.3809L1.0746 8.00486C1.074 5.74876 3.4703 4.29946 5.4681 5.34736L37.2685 22.0276Z"
+                            fill="#0D6EFD"
+                            fill-opacity="0.65"
+                          />
+                        </g>
+                        <g id="darkTriangleGroup">
+                          <path
+                            id="darkTriangle2"
+                            d="M54.003 22.0307C56.137 23.1559 56.138 26.211 54.005 27.3372L22.409 44.0204C20.4114 45.0752 18.0088 43.6272 18.0082 41.3683L18 8.01736C17.9994 5.75836 20.4014 4.30926 22.3995 5.36306L54.003 22.0307Z"
+                            fill="#6610F2"
+                            fill-opacity="0.65"
+                          />
+                          <path
+                            id="darkTriangle1"
+                            d="M37.0035 22.0307C39.1369 23.1559 39.1377 26.211 37.0048 27.3372L5.409 44.0204C3.4114 45.0752 1.0088 43.6272 1.0082 41.3683L1 8.01736C0.9995 5.75836 3.4014 4.30926 5.3995 5.36306L37.0035 22.0307Z"
+                            fill="#6610F2"
+                            fill-opacity="0.65"
+                          />
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1_2">
+                      <rect width="86" height="49" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </a>
             </div>
             <!-- This is my second column and i don't need to put a lg-6 or any other
             colum size value since it will automaticly take up the rest of the
             row space -->
             <div class="col-lg-6">
-              <img class="me-img" src="imgs/sticker.png" alt="picture of me" />
+              <img
+                class="me-img text-center"
+                src="imgs/sticker.png"
+                alt="picture of me"
+              />
             </div>
           </div>
         </div>
@@ -126,28 +184,43 @@
         <div class="row">
           <!-- I made a whole row for my title -->
           <div class="col-12 my-5">
-            <h3>Recent work</h3>
+            <h3 class="recentWorkTitlte">Recent work</h3>
           </div>
           <!-- This is the second row for my cards with pictures and titles of my recent work -->
           <div class="row"></div>
           <!-- I want them all to line up on big screens and for that i choose col-lg-4 but for smaller screens it will take up 12 with col-md-12 and mb-5 for some margins at the bottom -->
           <div class="col-lg-4 col-md-12 mb-5">
             <!-- Here i choose 'card' that is a bootstrap value that gives me a white background -->
-            <div class="card">
-              <img src="imgs/grid.png" alt="Picture of a website i created" />
-              <h3>Lorem, ipsum.</h3>
+            <div class="recentWorkCards">
+              <img
+                class="recentWorkImg"
+                src="imgs/grid.png"
+                alt="Picture of a website i created"
+              />
+              <p class="text-secondary recentWorkDescription">Lorem, ipsum.</p>
+              <a class="button recentWorkButtons" href="">See more</a>
             </div>
           </div>
           <div class="col-lg-4 col-md-12 mb-5">
-            <div class="card">
-              <img src="imgs/grid.png" alt="Picture of a website i created" />
-              <h3>Lorem, ipsum.</h3>
+            <div class="recentWorkCards">
+              <img
+                class="recentWorkImg"
+                src="imgs/grid.png"
+                alt="Picture of a website i created"
+              />
+              <p class="text-secondary recentWorkDescription">Lorem, ipsum.</p>
+              <a class="button recentWorkButtons" href="">See more</a>
             </div>
           </div>
           <div class="col-lg-4 col-md-12 mb-5">
-            <div class="card">
-              <img src="imgs/grid.png" alt="Picture of a website i created" />
-              <h3>Lorem, ipsum.</h3>
+            <div class="recentWorkCards">
+              <img
+                class="recentWorkImg"
+                src="imgs/grid.png"
+                alt="Picture of a website i created"
+              />
+              <p class="text-secondary recentWorkDescription">Lorem, ipsum.</p>
+              <a class="button recentWorkButtons" href="">See more</a>
             </div>
           </div>
         </div>

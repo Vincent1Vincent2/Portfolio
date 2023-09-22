@@ -6,15 +6,98 @@
   /* I use this to center my content */
   display: flex;
   align-items: center;
+  background-image: url(/bg-min.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /* The '*' targets everything even if it dosent have a class */
 * {
-  /* Bootstrap has a small defult font so i change it with here */
+  /* Bootstrap has a small defult font so i change it here */
   font-size: 20px;
   line-height: 1.428;
   /* This is my font */
   font-family: "Poppins", sans-serif;
+  cursor: none;
+}
+
+/* I removed the global cursor since ive made a custom one */
+*:hover {
+  cursor: none;
+}
+
+/* This removes my scroll bar so i can replace it with my own custom progress one */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* This is my header for the coustom progressbar witch positions it fixed at det topp*/
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #f1f1f1;
+}
+
+/* The progress container of the coustom bar */
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: #ccc;
+}
+
+/* The progress bar */
+.progress-bar {
+  height: 8px;
+  background-image: linear-gradient(to right, blue, rgb(157, 0, 255));
+  width: 0%;
+}
+
+/* These are the colors for my arrow animation on the ladning page */
+:root {
+  --dark-color: #6610f2;
+  --light-color: #0d6efd;
+}
+
+/* This targets my two dark triangles and give them a color */
+#darkTriangleGroup {
+  fill: var(--dark-color);
+}
+
+/* This targets my one light triangl and give them a color */
+#lightTriangleGroup {
+  fill: var(--light-color);
+}
+
+/* This gives my triangels and text a smooth animation when fading in and out */
+#darkTriangle2,
+#darkTriangle1,
+#lightTriangle,
+#buttonText {
+  transition: all 0.5s ease;
+}
+
+/* This will move one of the dark triangles off screen until i need it */
+#darkTriangle1 {
+  transform: translateX(-100%);
+}
+
+/* This moves my trangle right by 40% then fading out with the opacity value set to 0 */
+svg:hover #darkTriangle2 {
+  transform: translateX(40%);
+  opacity: 0;
+}
+
+/* This brings my triangle that i hid from -100% moving from left to write until it is at it's orignal postition  */
+svg:hover #darkTriangle1 {
+  transform: translateX(0%);
+}
+
+/* This moves my light triangle right 20% */
+svg:hover #lightTriangle {
+  transform: translateX(20%);
 }
 
 /* This gives my nav text a blue color and i add a transition to it to make it smooth  */
@@ -29,6 +112,52 @@
   text-underline-offset: 0.5rem;
 }
 
+/* This is the style for my inner smaller cursor */
+.inner-cursor {
+  z-index: 9999;
+  position: fixed;
+  left: -50px;
+  width: 15px;
+  height: 15px;
+  transform: translate(-50%, -50%);
+  background-color: rgb(91, 109, 208);
+  border-radius: 50%;
+  pointer-events: none;
+  transition: width 500ms, height 500ms;
+  opacity: 1;
+}
+
+/* This is a class to change the opacity witch i target in my javascript */
+.inner-cursor.opacity {
+  opacity: 0;
+}
+
+/* This is a class shrinks my outer cursor and turns it to a nutral color  */
+.outer-cursor.shrink {
+  width: 35px;
+  height: 35px;
+  transition: width 500ms, height 500ms;
+  mix-blend-mode: luminosity;
+  background-color: black;
+  opacity: 0.5;
+}
+
+/* This is my outer cursor */
+.outer-cursor {
+  z-index: 999;
+  position: fixed;
+  left: -50px;
+  width: 45px;
+  height: 45px;
+  transform: translate(-50%, -50%);
+  background-color: rgb(184, 99, 199);
+  opacity: 0.5;
+  border-radius: 50%;
+  pointer-events: none;
+
+  transition: width 100ms, height 100ms;
+}
+
 /* I make the font size for my intro title very big and give a line hight to bring the text closer to each line */
 .intro-title {
   font-size: 7rem;
@@ -38,8 +167,39 @@
 
 /* Here i want my picture to take up 100% of the columns height */
 .me-img {
-  min-height: 100%;
-  min-height: 100vh;
+  height: 100%;
+  height: 100svh;
+}
+
+.recentWorkCards {
+  border-radius: 10px;
+  background-color: white;
+  padding: 20px;
+  padding-bottom: 35px;
+}
+
+.recentWorkTitlte {
+  font-weight: bold;
+  font-size: 65px;
+}
+
+.recentWorkImg {
+  width: 20vw;
+}
+
+.recentWorkDescription {
+  margin-bottom: 35px;
+}
+
+.recentWorkButtons {
+  background-color: #3a37cfdc;
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: solid 3px rgba(137, 43, 226, 0);
+  border-radius: 50px;
+  text-decoration: none;
+  color: white;
 }
 
 /* Here i define how large my Github and LinkedIn icons should be  */
@@ -50,8 +210,8 @@
 
 /* Here i define how large my project imgs should be */
 .project-img {
-  min-height: 30%;
-  min-height: 30vh;
+  height: 30%;
+  height: 30vh;
 }
 
 /* Some style for my contact title  */
@@ -113,12 +273,21 @@ I need to chage them since i alterd bootstraps defult values */
   .about-description {
     font-size: 25px;
   }
+
+  .recentWorkImg {
+    width: 50vw;
+  }
 }
 
 @media only screen and (max-width: 750px) {
   .intro-title {
     font-size: 5rem;
     line-height: 1;
+  }
+
+  .me-img {
+    height: 60%;
+    height: 60svh;
   }
 }
 
@@ -130,6 +299,15 @@ I need to chage them since i alterd bootstraps defult values */
 }
 
 @media only screen and (max-width: 450px) {
+  .me-img {
+    height: 60%;
+    height: 60svh;
+  }
+
+  .project-img {
+    height: 25vh;
+  }
+
   .about-description {
     font-size: 23px;
   }
@@ -138,5 +316,10 @@ I need to chage them since i alterd bootstraps defult values */
 @media only screen and (max-width: 345px) {
   .about-description {
     font-size: 21px;
+  }
+
+  .me-img {
+    height: 40%;
+    height: 40svh;
   }
 }
